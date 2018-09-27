@@ -24,7 +24,11 @@ public class Ex2Combining {
         // i.e. the first value will be "010" (0 from values1 and 10 from values2)
 
         ///////// Write the solution in this block
-        return null;
+        return Observable.zip(
+                values1.map(Object::toString),
+                values2.map(Object::toString),
+                (s1, s2) -> s1 + s2
+        );
         ///////// Write the solution in this block
     }
 
@@ -33,7 +37,11 @@ public class Ex2Combining {
         // Each values should be combined in the same way as in the previous example
 
         ///////// Write the solution in this block
-        return null;
+        return Observable.combineLatest(
+                values1.map(Object::toString),
+                values2.map(Object::toString),
+                (s1, s2) -> s1 + s2
+        );
         ///////// Write the solution in this block
     }
 
@@ -41,7 +49,7 @@ public class Ex2Combining {
         // You don't need to combine any values in this exercise. Just join `values1` and `values2` into one Observable
 
         ///////// Write the solution in this block
-        return null;
+        return Observable.merge(values1, values2);
         ///////// Write the solution in this block
     }
 }

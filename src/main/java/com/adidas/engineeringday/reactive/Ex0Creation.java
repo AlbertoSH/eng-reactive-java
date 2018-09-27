@@ -15,7 +15,7 @@ public class Ex0Creation {
     public Observable<String> getSingleValue() {
         // Emit SINGLE_VALUE
         ///////// Write the solution in this block
-        return null;
+        return Observable.just(SINGLE_VALUE);
         ///////// Write the solution in this block
     }
 
@@ -23,7 +23,7 @@ public class Ex0Creation {
     public Observable<String> getMultipleValue() {
         // Emit all the values contained in MULTIPLE_VALUES
         ///////// Write the solution in this block
-        return null;
+        return Observable.fromIterable(MULTIPLE_VALUES);
         ///////// Write the solution in this block
     }
 
@@ -36,7 +36,7 @@ public class Ex0Creation {
         Callable<String> func = () -> SINGLE_VALUE;
 
         ///////// Write the solution in this block
-        return null;
+        return Observable.fromCallable(func);
         ///////// Write the solution in this block
     }
 

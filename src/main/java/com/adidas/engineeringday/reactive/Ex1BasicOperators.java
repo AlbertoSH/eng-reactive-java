@@ -13,7 +13,7 @@ public class Ex1BasicOperators {
         // Modify the emitted values so each value is multiplied by 2
         return initialValues
                 ///////// Write the solution in this block
-
+                .map(x -> x * 2)
                 ///////// Write the solution in this block
                 ;
     }
@@ -22,7 +22,7 @@ public class Ex1BasicOperators {
         // Same exercise as the previous one BUT you MUST use the provided method multiply(int x, int y)
         return initialValues
                 ///////// Write the solution in this block
-
+                .flatMap(x -> multiply(x, 2))
                 ///////// Write the solution in this block
                 ;
     }
@@ -35,7 +35,7 @@ public class Ex1BasicOperators {
         // Allow only values that are divisible by 3
         return initialValues
                 ///////// Write the solution in this block
-
+                .filter(x -> x % 3 == 0)
                 ///////// Write the solution in this block
                 ;
     }
@@ -44,7 +44,7 @@ public class Ex1BasicOperators {
         // Emit only the first 4 values
         return initialValues
                 ///////// Write the solution in this block
-
+                .take(4)
                 ///////// Write the solution in this block
                 ;
     }
@@ -54,7 +54,7 @@ public class Ex1BasicOperators {
         // Emit only the last 4 values
         return initialValues
                 ///////// Write the solution in this block
-
+                .takeLast(4)
                 ///////// Write the solution in this block
                 ;
     }
@@ -64,7 +64,7 @@ public class Ex1BasicOperators {
         // i.e. if the values are [1, 1, 2, 1] emit [1, 2, 1]
         return withDuplicates
                 ///////// Write the solution in this block
-
+                .distinctUntilChanged()
                 ///////// Write the solution in this block
                 ;
     }
@@ -74,7 +74,7 @@ public class Ex1BasicOperators {
         // i.e. if the values are [1, 1, 2, 1] emit [1, 2]
         return withDuplicates
                 ///////// Write the solution in this block
-
+                .distinct()
                 ///////// Write the solution in this block
                 ;
     }
