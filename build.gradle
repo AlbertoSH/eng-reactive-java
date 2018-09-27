@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.adidas.engineeringday.reactive'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    rxJavaVersion = '2.2.2'
+    jUnitVersion = '5.1.0'
+}
+
+dependencies {
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$jUnitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jUnitVersion"
+}
+
+test {
+    useJUnitPlatform()
+}
